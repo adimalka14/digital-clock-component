@@ -1,0 +1,61 @@
+.digital-number {
+  position: relative;
+  height: 4em;
+  width: 2.5em;
+
+  span {
+    position: absolute;
+
+    &.on {
+      opacity: 1;
+    }
+
+    &.off {
+      opacity: 0;
+    }
+  }
+
+  .horizontal {
+    height: 5px;
+    width: 100%;
+    left: 0;
+  }
+
+  .vertical {
+    height: 50%;
+    width: 5px;
+  }
+
+  .top {
+    top: -2.5%;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+
+    &.right, &.left {
+      top: 2.5%;
+    }
+  }
+
+  .mid {
+    top: 50%;
+    clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+  }
+
+  .bottom {
+    top: 102.5%;
+    clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+
+    &.right, &.left {
+      top: 55%;
+    }
+  }
+
+  .left {
+    left: -5%;
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  }
+
+  .right {
+    right: -5%;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+  }
+}

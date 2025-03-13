@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *;
+
+.digital-clock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    padding: 0.5em;
+    border-radius:6px;
+    font:15px/1.3 Arial, sans-serif;
+
+    &.light{
+        background-color: $light-background;
+        color:$light-color;
+    }
+
+    &.dark{
+        background-color: $dark-background;
+        color:$dark-color;
+    }
+
+}
