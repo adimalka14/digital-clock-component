@@ -12,7 +12,7 @@ npm install my-awesome-react-digital-clock
 Make sure you have React (v19+) installed, as defined in the peer dependencies.
 
 ## Usage
-### Using the Hook
+### Using the Digital Clock
 ``` jsx Copy
 import React from 'react';
 import { DigitalClock } from 'my-awesome-react-digital-clock';
