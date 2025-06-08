@@ -3,7 +3,7 @@
   "description": "A digital clock for React apps",
   "main": "dist/my-awesome-react-digital-clock.es.js",
   "private": false,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
