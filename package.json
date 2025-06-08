@@ -1,7 +1,9 @@
 {
   "name": "my-awesome-react-digital-clock",
-  "private": true,
-  "version": "0.0.0",
+  "description": "A digital clock for React apps",
+  "main": "dist/my-awesome-react-digital-clock.es.js",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -42,8 +44,7 @@
   "keywords": [
     "react",
     "digital",
-    "clock",
-    "hook"
+    "clock"
   ],
   "license": "MIT",
   "author": "Adi Malka",

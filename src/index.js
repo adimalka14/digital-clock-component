@@ -1,1 +1,1 @@
-export { DigitalClock} from './components';
+export { DigitalClock } from './components';

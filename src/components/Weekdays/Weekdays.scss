@@ -1,0 +1,10 @@
+.weekdays {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    font-size: calc(var(--clock-size) * 0.045);
+    font-weight: bold;
+}

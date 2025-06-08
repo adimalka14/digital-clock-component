@@ -1,61 +1,71 @@
+$line-width: calc(var(--clock-size) * 0.015);
+
 .digital-number {
-  position: relative;
-  height: 4em;
-  width: 2.5em;
+    position: relative;
+    width: calc(var(--clock-size) * 0.1);
+    height: calc(var(--clock-size) * 0.2);
 
-  span {
-    position: absolute;
+    span {
+        position: absolute;
+        background: var(--clock-fg);
+        transition: background 0.2s ease;
 
-    &.on {
-      opacity: 1;
+        &:hover {
+            background: var(--clock-hover);
+        }
+
+        &.on {
+            opacity: 1;
+        }
+
+        &.off {
+            opacity: 0;
+        }
     }
 
-    &.off {
-      opacity: 0;
+    .horizontal {
+        height: $line-width;
+        width: 100%;
+        left: 0;
     }
-  }
 
-  .horizontal {
-    height: 5px;
-    width: 100%;
-    left: 0;
-  }
-
-  .vertical {
-    height: 50%;
-    width: 5px;
-  }
-
-  .top {
-    top: -2.5%;
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
-
-    &.right, &.left {
-      top: 2.5%;
+    .vertical {
+        height: 50%;
+        width: $line-width;
     }
-  }
 
-  .mid {
-    top: 50%;
-    clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
-  }
+    .top {
+        top: -2.5%;
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
 
-  .bottom {
-    top: 102.5%;
-    clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
-
-    &.right, &.left {
-      top: 55%;
+        &.right,
+        &.left {
+            top: 2.5%;
+        }
     }
-  }
 
-  .left {
-    left: -5%;
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-  }
+    .mid {
+        top: 50%;
+        clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);
+    }
 
-  .right {
-    right: -5%;
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
-  }
+    .bottom {
+        top: 102.5%;
+        clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+
+        &.right,
+        &.left {
+            top: 55%;
+        }
+    }
+
+    .left {
+        left: -5%;
+        clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    }
+
+    .right {
+        right: -5%;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+    }
 }

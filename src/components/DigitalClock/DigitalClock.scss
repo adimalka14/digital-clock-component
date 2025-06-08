@@ -1,24 +1,43 @@
-@use "../../styles/variables" as *;
-
 .digital-clock {
-    position: relative;
+    //--clock-size: 120px;
+    //--clock-bg: #c3c3c3;
+    //--clock-fg: #000000;
+    //--clock-hover: #666666;
+
+    width: var(--clock-size);
+    height: calc(var(--clock-size) * 0.3);
+    background-color: var(--clock-bg);
+    color: var(--clock-fg);
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    text-align:center;
-    padding: 0.5em;
-    border-radius:6px;
-    font:15px/1.3 Arial, sans-serif;
 
-    &.light{
-        background-color: $light-background;
-        color:$light-color;
+    padding: calc(var(--clock-size) * 0.06);
+    border-radius: calc(var(--clock-size) * 0.02);
+    font:
+        calc(var(--clock-size) * 0.05) / 1.3 Arial,
+        sans-serif;
+    gap: calc(var(--clock-size) * 0.05);
+
+    .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: calc(var(--clock-size) * 0.015);
+        width: 100%;
     }
 
-    &.dark{
-        background-color: $dark-background;
-        color:$dark-color;
+    .bottom {
+        display: flex;
+        flex-direction: row;
+        gap: calc(var(--clock-size) * 0.03);
+        width: 100%;
     }
 
+    &:hover {
+        background-color: var(--clock-hover);
+    }
 }
